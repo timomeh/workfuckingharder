@@ -1,0 +1,61 @@
+html, body {
+	background-color: $page-background-color;
+	font-family: $serif;
+	line-height: $paragraph-line-height;
+	color: $text-color;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	border-top: $page-border-height solid $page-top-color;
+	border-bottom: $page-border-height solid $page-bottom-color;
+}
+
+.preload * {
+	@include transition(none !important);
+}
+
+.hide {
+	display: none;
+}
+
+h1 {
+	margin: 0;
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: ($block-headline-margin-bottom - 15px);
+	font-family: $sans-serif;
+	font-weight: 700;
+	font-size: $h2-font-size;
+	line-height: $h2-line-height;
+	letter-spacing: .05em;
+}
+
+a {
+	text-decoration: none;
+	@include transition(all .3s);
+}
+
+p {
+	margin: 0 0 1.3125em 0;
+
+	a {
+		color: lighten($brown, 10);
+		border-bottom: 1px solid $grey;
+
+		&:hover {
+			color: $brown;
+			border-color: $gold;
+		}
+	}
+}
+
+img#wpstats, img#wpstats2 {
+	visibility: hidden;
+	overflow: hidden;
+	height: 0;
+	display: block;
+}

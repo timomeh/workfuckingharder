@@ -1,0 +1,38 @@
+//
+// COLOR REFERENCE
+// 
+// Assign colors in this way:
+//  - First assign color names to color values, e.g.
+//      $red: #FF0000;
+//      $blue: #0000FF;
+//  - Then assign properties to colors, e.g.
+//      $link-color: $blue;
+//      $border-color: $red;
+//  - If you think you have more dependencies, go on!
+//      $header-bottom-border: $border-color;
+//      
+// If you see two or more colors looking very similar
+// just merge them. (Don't tell it your designers)
+// 
+
+$silver: #f2f2ef;
+$gold: #dbc390;
+$brown: #403833;
+
+$white: white;
+$grey: #b2b2b0;
+
+
+$page-background-color: $silver;
+$page-top-color: $gold;
+$page-bottom-color: $gold;
+$page-logo-color: $gold;
+
+$article-background-color: $white;
+$article-meta-color: $grey;
+
+$pagination-background-color: $gold;
+$pagination-color: $silver;
+
+$text-color: $brown;
+$h2-color: $brown;

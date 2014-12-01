@@ -1,0 +1,282 @@
+.col {
+	padding: 0 $block-margin-left-right/2;
+	float: left;
+	@include box-sizing(border-box);
+	@include clearfix;
+
+	@media #{$medium} {
+		padding: 0 $block-margin-left-right;
+	}
+}
+
+.col--large {
+	width: 100%;
+}
+
+.col--small {
+	width: 100%;
+
+	@media #{$medium} {
+		width: 50%;
+	}
+}
+
+.m-post {
+	margin: 0 auto $block-margin-bottom/2;
+	background-color: $article-background-color;
+	padding-bottom: $block-padding-top-bottom/2;
+
+	@media #{$medium} {
+		margin-bottom: $block-margin-bottom;
+	}
+
+	&.m-post--small {
+		padding-bottom: $block-padding-top-bottom/4;
+
+		.post_pre {
+			margin-bottom: ($block-padding-top-bottom/2 - 9px);
+		}
+
+		.post_header {
+			padding-top: $block-padding-top-bottom/2;
+		}
+
+		p {
+			@media #{$medium} {
+				padding: 0 $block-text-padding-left-right/2;
+			}
+		}
+	}
+
+	.aligncenter {
+		display: block;
+		margin: 0 auto 1em;
+	}
+
+	.post_pre {
+		margin-bottom: 0;
+		background-color: $page-background-color;
+
+		.no-filling {
+			width: auto;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+
+	.post_header {
+		padding: ($block-padding-top-bottom - 9px) $block-text-padding-left-right/2 - 20px 0;
+		text-transform: uppercase;
+		font-family: $sans-serif;
+		text-align: center;
+
+		@media #{$medium} {
+			padding: ($block-padding-top-bottom - 9px) $block-text-padding-left-right 0;
+		}
+	}
+
+	.post_title {
+		color: $h2-color;
+		word-wrap: break-word;
+
+		@media #{$medium} {
+			word-wrap: initial;
+		}
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: lighten($h2-color, 15);
+			}
+		}
+
+		.external-link {
+			&:after {
+				content: ' →';
+			}
+		}
+	}
+
+	.post_meta {
+		color: $article-meta-color;
+		font-size: $meta-font-size;
+		line-height: $meta-line-height;
+		font-family: $sans-serif;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		a {
+			color: inherit;
+
+			&:hover {
+				color: darken($article-meta-color, 20);
+			}
+		}
+	}
+
+	a.post_meta:hover {
+		color: darken($article-meta-color, 20);
+	}
+
+	.post_date {
+		display: inline-block;
+		
+		text-align: center;
+		margin-bottom: ($block-date-margin-bottom - 10px);
+
+		&:before {
+			content: '— ';
+		}
+
+		&:after {
+			content: ' —';
+		}
+	}
+
+	.post_footer {
+		padding: 0 $block-text-padding-left-right;
+		text-align: center;
+
+		.post_date {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		padding: 0 $block-text-padding-left-right/2 - 20px;
+
+		@media #{$medium} {
+			padding: 0 $block-text-padding-left-right;
+		}
+
+		> code {
+			background-color: #f5f2f0;
+			font-family: Consolas, Monaco, 'Andale Mono', monospace;
+			font-size: .9em;
+			padding: .2em .5em;
+			border-radius: 3px;
+		}
+	}
+
+	pre {
+		margin: 0 $block-text-padding-left-right/2 - 20px 1.3125em;
+
+		code {
+			&:before {
+				visibility: hidden;
+				@media #{$medium} {
+					visibility: visible;
+				}
+			}
+		}
+
+		@media #{$medium} {
+			margin: 0 $block-text-padding-left-right 1.3125em;
+		}
+	}
+
+	blockquote {
+		margin-left: -3px;
+		margin-right: 0;
+		background-color: lighten($silver, 3);
+		border-left: 3px solid $gold;
+		padding: 10px 0;
+
+		p:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	ul, ol {
+		padding: 0 $block-text-padding-left-right/2 + 20px;
+
+		@media #{$medium} {
+			padding: 0 $block-text-padding-left-right + 40px;
+		}
+	}
+
+	ol li {
+		margin-bottom: 1em;
+	}
+
+	div {
+		width: 100%;
+		margin-bottom: 1.3125em;
+
+		+ p {
+			margin-top: 2.625em;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	iframe {
+		width: 100% !important;
+		max-width: none !important;
+		margin-top: 0 !important;
+		margin-bottom: 1.3125em !important;
+		display: block;
+	}
+}
+
+.m-post.m-post--simple {
+	padding-bottom: 0;
+
+	&:hover {
+		.post_footer {
+			opacity: .8;
+		}
+	}
+
+	.post_footer {
+		opacity: 0;
+		position: absolute;
+		padding: 10px 0;
+		height: 2em;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: $white;
+		text-shadow: 0 0 10px black;
+		@include transition(opacity .3s);
+
+		&:hover {
+			opacity: 1;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+
+	.post_data {
+		position: relative;
+		margin-bottom: 0;
+	}
+
+}
+
+.m-post.m-post--status {
+	p:first-of-type {
+		padding-top: 2.625em;
+	}
+
+	div + p {
+		padding-top: 1.3125em !important;
+		margin-top: 0;
+	}
+
+	iframe {
+		margin-bottom: 0 !important;
+	}
+}
