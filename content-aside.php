@@ -1,4 +1,7 @@
 <?php
+$readmore = "weiterlesen";
+if(get_field('is_english')) $readmore = "read more";
+
 if(get_field('size') == 'large' || is_single()) $postsize = 'large';
 else $postsize = 'small'; ?>
 
@@ -19,7 +22,7 @@ else $postsize = 'small'; ?>
 			<?php the_content(''); ?>
 <?php if(!is_single() && strstr($post->post_content,'<!--more-->')): ?>
 			<footer class="post_footer">
-				<a href="<?php the_permalink(); ?>#more-<?php the_ID(); ?>" class="post_meta">weiterlesen</a>
+				<a href="<?php the_permalink(); ?>#more-<?php the_ID(); ?>" class="post_meta"><?= $readmore ?></a>
 			</footer>
 <?php elseif(is_single()): ?>
 			<footer class="post_footer post_meta">

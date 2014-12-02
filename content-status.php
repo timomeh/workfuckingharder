@@ -1,4 +1,7 @@
 <?php
+$readmore = "weiterlesen";
+if(get_field('is_english')) $readmore = "read more";
+
 if(get_field('size') == 'large' || is_single()) $postsize = 'large';
 else $postsize = 'small'; ?>
 
