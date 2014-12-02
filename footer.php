@@ -15,7 +15,7 @@
 
 	<div class="m-about">
 		<a href="<?php echo home_url(); ?>/ego"><img class="facey" srcset="<?= get_stylesheet_directory_uri() ?>/img/facey.jpg, <?= get_stylesheet_directory_uri() ?>/img/facey@2x.jpg 2x" alt="Timo Mämecke" width="110" height="110"></a>
-		<p>Hi!<br>Mein Name ist <a href="<?php echo home_url(); ?>/ego">Timo Mämecke</a>, ich bin Front End Developer und Musiker aus Gummersbach. Das ist irgendwo bei Köln. Außerdem spreche ich sehr laut.</p>
+		<p>Hey!<br>I am <a href="<?php echo home_url(); ?>/ego">Timo Mämecke</a>, a Front End Web Developer and Musician with a Social Jetlag from Gummersbach, Germany. That's somewhere near Cologne. Also, I speak very loudly.</p>
 	</div>
 	<ul class="m-contact">
 		<li class="contact_twitter">
