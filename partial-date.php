@@ -1,5 +1,5 @@
 <?php $class = "post_date";
-if(is_single()) $class .= " post_meta"; ?>
+if(is_single() && get_post_format() != "status") $class .= " post_meta"; ?>
 
 <?php if(get_field('is_english')):
 $german = array('Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez');
