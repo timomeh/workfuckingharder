@@ -1,0 +1,12 @@
+.b-comments {
+  width: $page-width;
+  max-width: 100%;
+  margin: 0 auto;
+  @include clearfix;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 1.6em;
+    margin-bottom: 40px;
+  }
+}

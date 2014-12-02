@@ -1,0 +1,139 @@
+.m-comments {
+  margin: 0 auto $block-margin-bottom/2;
+  background-color: $article-background-color;
+  padding: 20px $block-text-padding-left-right/2 - 20px;
+
+  @media #{$medium} {
+    padding: 40px $block-text-padding-left-right;
+  }
+
+  .list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    .leftside {
+      position: relative;
+    }
+
+    .singlecomment {
+      margin-bottom: 40px;
+      margin-top: 20px;
+
+      @media #{$small-only} {
+        border-top: 1px solid $silver;
+      }
+
+      &:hover {
+        .comment-reply-link {
+          opacity: 1;
+        }
+      }
+    }
+
+    ul {
+      margin-left: 30px;
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .author {
+      @include clearfix;
+    }
+
+    .content {
+      margin-left: 60px;
+      @media #{$small-only} {
+        margin-left: 0;
+      }
+
+      ul {
+        list-style-type: disc;
+        margin: 0 0 .5em 0;
+        padding-left: 40px;
+
+        li {
+          margin-bottom: 0;
+          margin-top: 0;
+        }
+      }
+    }
+
+    p {
+      font-size: .9em;
+      margin-bottom: .5em;
+
+      > code {
+        background-color: #f5f2f0;
+        font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        font-size: .9em;
+        padding: .2em .5em;
+        border-radius: 3px;
+      }
+    }
+
+    pre {
+      background-color: #f5f2f0;
+      padding: 1em;
+    }
+
+    blockquote {
+      padding: 5px 0 5px 15px;
+      margin-left: -3px;
+      border-left: 3px solid $gold;
+      color: lighten($brown, 20);
+
+      p:last-of-type {
+        margin: 0;
+      }
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      float: left;
+      border-radius: 50%;
+      margin-right: 20px;
+
+      @media #{$small-only} {
+        display: none;
+      }
+    }
+    
+    .name {
+      float: left;
+      padding: 6px 0;
+
+      a {
+        color: lighten($brown, 10);
+        border-bottom: 1px solid $grey;
+
+        &:hover {
+          color: $brown;
+          border-color: $gold;
+        }
+      }
+    }
+
+    .comment-reply-link {
+      color: lighten($brown, 10);
+      font-size: .5em;
+      opacity: 0;
+      float: right;
+      @media #{$medium} {
+        position: absolute;
+        display: block;
+        bottom: -60px;
+        left: 0;
+        width: 40px;
+        text-align: center;
+        float: none;
+      }
+      
+
+      &:hover {
+        color: $brown;
+      }
+    }
+  }
+}

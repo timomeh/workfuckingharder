@@ -1,0 +1,140 @@
+.m-makecomment {
+  margin-bottom: 40px;
+
+  .list & {
+    @media #{$medium} {
+      margin-left: 60px;
+    }
+  }
+
+  .sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+  }
+
+  input, textarea {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid $comment-border-color;
+    padding: 5px;
+    @include box-sizing(border-box);
+    @include transition(.2s border-color);
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $comment-active-border-color;
+    }
+  }
+
+  textarea {
+    max-width: 100%;
+    display: block;
+    height: 80px;
+  }
+
+  input {
+    margin-bottom: 20px;
+
+    @media #{$medium} {
+      width: 50%;
+      float: left;
+      display: block;
+    }
+  }
+
+  button {
+    border: 0;
+    background-color: $comment-button-color;
+    display: block;
+    color: $comment-border-color;
+    @include transition(.2s background-color, .2s color);
+
+    &:hover {
+      background-color: darken($comment-button-color, 5);
+
+      &:before {
+        border-color: $white;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media #{$medium} {
+      position: absolute;
+      bottom: 0;
+      right: -$block-text-padding-left-right + 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 14px;
+        left: 13px;
+        width: 10px;
+        height: 10px;
+        border-top: 2px solid $comment-border-color;
+        border-right: 2px solid $comment-border-color;
+        @include transform(rotate(45deg));
+        @include transition(.2s border-color);
+      }
+
+      .mq-sr {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+        border: 0;
+      }
+    }
+
+    @media #{$large} {
+      right: -$block-text-padding-left-right - 20px;
+    }
+
+    @media #{$small-only} {
+      margin-top: 20px;
+      padding: 5px 15px;
+      
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .area {
+    position: relative;
+  }
+
+  .fields {
+    @include clearfix;
+  }
+
+  .cancel-reply {
+    font-size: .6em;
+    color: $gold;
+
+    a {
+      display: block;
+      margin-top: 10px;
+      color: inherit;
+
+      &:hover {
+        color: $brown;
+      }
+    }
+  }
+}

@@ -12,10 +12,10 @@ else $postsize = 'small'; ?>
 			<header class="post_header">
 <?php if(is_single()): ?>
 				<h2 class="post_title"><?php the_title(); ?></h2>
-				<time class="post_meta post_date" datetime="<?php the_time('Y-m-d – H:i'); ?>"><?php the_time('d. F Y – H:i'); ?></time>
+				<?php get_template_part('partial', 'date'); ?>
 <?php else: ?>
 				<h2 class="post_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-				<a href="<?php the_permalink(); ?>" class="post_meta"><time class="post_date" datetime="<?php the_time('Y-m-d – H:i'); ?>"><?php the_time('d. F Y – H:i'); ?></time></a>
+				<a href="<?php the_permalink(); ?>" class="post_meta"><?php get_template_part('partial', 'date'); ?></a>
 <?php endif; ?>		
 			</header>
 			<?php the_content(''); ?>

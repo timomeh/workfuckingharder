@@ -12,11 +12,11 @@ else $postsize = 'small'; ?>
 			<?php the_content(''); ?>
 <?php if(!is_single()): ?>
 			<footer class="post_footer">
-				<a href="<?php the_permalink(); ?>" class="post_meta"><time class="post_date" datetime="<?php the_time('Y-m-d – H:i'); ?>"><?php the_time('d. F Y – H:i'); ?></time></a>
+				<a href="<?php the_permalink(); ?>" class="post_meta"><?php get_template_part('partial', 'date'); ?></a>
 			</footer>
 <?php elseif(is_single()): ?>
 			<footer class="post_footer post_meta">
-				<time class="post_date" datetime="<?php the_time('Y-m-d – H:i'); ?>"><?php the_time('d. F Y – H:i'); ?></time><br>
+				<?php get_template_part('partial', 'date'); ?><br>
 				<?php echo get_the_tag_list('',', ',''); ?>
 			</footer>
 <?php endif; ?>

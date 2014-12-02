@@ -11,9 +11,6 @@ if ( false === $format ) {
 get_template_part('content', $format); ?>
 <?php endwhile; ?>
 <?php else: ?>
-	<?php
-if(get_field('size') == 'large' || is_single()) $postsize = 'large';
-else $postsize = 'small'; ?>
 
 	<div class="col col--large">
 		<article id="article-<?php the_ID() ?>" class="m-post m-post--large">
