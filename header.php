@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#dbc390">
-  <link rel="icon" sizes="256x256" href="<?= home_url(); ?>/favicon.ico">
+	<meta name="theme-color" content="#dbc390">
+	<link rel="icon" sizes="192x192" href="<?= get_stylesheet_directory_uri() ?>/img/icon-highresish.png">
 	<title><?php bloginfo( 'name' ); ?><?php wp_title( '|' ); ?></title>
 	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Merriweather:400,700,400italic,700italic|Montserrat:400,700">
 	<link rel="stylesheet" href="<?= get_stylesheet_uri() ?>?v=<?= $theme->get('Version'); ?>">
