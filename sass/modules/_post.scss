@@ -220,7 +220,7 @@
 		display: block;
 	}
 
-	iframe {
+	iframe:not(.twitter-tweet) {
 		width: 100% !important;
 		max-width: none !important;
 		margin-top: 0 !important;
@@ -229,7 +229,6 @@
 	}
 
 	.twitter-tweet {
-		width: initial !important;
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
